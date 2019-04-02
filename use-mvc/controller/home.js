@@ -1,7 +1,7 @@
 const HomeService = require('../service/home');
 module.exports = {
     index: async (ctx, next) => {
-        await ctx.render("home/index", {title: "iKcamp欢迎您"});
+        await ctx.render("home/login");
     },
     home: async (ctx, next) => {
         console.log(ctx.request.query);
@@ -17,16 +17,19 @@ module.exports = {
             btnName: 'GoGoGo'
         });
     },
-    register: async (ctx, next) => {
-        let params = ctx.request.body;
-        let name = params.name;
-        let password = params.password;
-        let res = await HomeService.register(name,password);
-        if(res.status == "-1"){
-          await ctx.render("home/login", res.data);
-        }else{
-          ctx.state.title = "个人中心";
-          await ctx.render("home/success", res.data);
-        }
+    register: async (ctx, next)  => {
+        await ctx.render('home/register');
     }
+    // register: async (ctx, next) => {
+    //     let params = ctx.request.body;
+    //     let name = params.name;
+    //     let password = params.password;
+    //     let res = await HomeService.register(name,password);
+    //     if(res.status == "-1"){
+    //       await ctx.render("home/login", res.data);
+    //     }else{
+    //       ctx.state.title = "个人中心";
+    //       await ctx.render("home/success", res.data);
+    //     }
+    // }
 }

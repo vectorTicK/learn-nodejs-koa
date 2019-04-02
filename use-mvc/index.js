@@ -6,7 +6,6 @@ const staticFiles = require('koa-static');
 const app = new Koa();
 const router = require('./router');
 app.use(staticFiles(path.resolve(__dirname, "./public"), {
-    maxage: 30 * 24 * 60 * 60 * 1000
 }));    
 app.use(nunjucks({
     ext: 'html',

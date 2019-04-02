@@ -1,0 +1,101 @@
+html, body, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #b6b9bd;
+    line-height: 1.6;
+    margin: 1rem;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 1rem;
+}
+
+ul li {
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+.brand {
+    text-align: center;
+}
+
+.brand span {
+    color: #fff;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+.com-info {
+    background: #c9e6ff;
+    padding: 2rem;
+}
+
+.com-info h3, .com-info ul {
+    text-align: center;
+    margin: 0;
+}
+
+.contact {
+    padding: 2rem;
+    background: #fff;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.contact form label {
+    display: block;
+}
+
+.contact form button, .contact form input, .contact form textarea {
+    width: 100%;
+    padding: .3rem 0;
+    border: 1px solid #c9e6ff;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form button {
+    background: #c9e6ff;
+}
+
+.contact form button {
+    padding: 1rem 0;
+}
+
+
+.contact form button:hover, .contact form button:focus {
+    background: #92bde7;
+    color: #fff;
+}
+
+.contact form .full {
+    grid-column: 1 / 3;
+}
+
+@media(min-width:700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .com-info h3, .com-info ul, .brand {
+        text-align: left;
+    }
+}
